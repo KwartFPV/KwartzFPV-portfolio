@@ -14,10 +14,7 @@
         .header { position: fixed; top: 0; left: 0; width: 100%; padding: 2.5rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent); }
         .logo { font-size: 3rem; font-weight: 900; color: #fff; text-decoration: none; }
         .logo span { color: var(--main-color); }
-        
-        /* On définit l'image de fond ici pour qu'elle s'affiche tout de suite */
         .home { position: relative; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; background: url('background2.webp') no-repeat center center/cover; }
-        
         .back-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
         .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.3), #050505); z-index: 1; }
         .home-content { position: relative; z-index: 2; text-align: center; }
@@ -33,7 +30,6 @@
     <link rel="stylesheet" href="style.css">
     
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
-    <link rel="icon" type="image/png" href="image.webp">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -105,7 +101,6 @@
                         <a href="https://rotorbuilds.com/build/33286" target="_blank" rel="noopener noreferrer" class="link-btn">View Full Build <i class='bx bx-right-arrow-alt'></i></a>
                     </div>
                 </div>
-
                 <div class="side-column">
                     <div class="card small-card">
                         <img src="drone-5.webp" alt="5 inch drone" class="card-bg" loading="lazy">
@@ -141,19 +136,54 @@
             <h2 class="heading">Latest <span>Flights</span></h2>
             <div class="cinema-grid">
                 <div class="video-card">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/av9pxhEjXCI?rel=0" title="Mountain Surfing" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    <iframe 
+                        width="100%" height="100%" 
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/av9pxhEjXCI?autoplay=1><img src=https://img.youtube.com/vi/av9pxhEjXCI/hqdefault.jpg alt='Mountain Surfing'><span>▶</span></a>"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Mountain Surfing"
+                        loading="lazy">
+                    </iframe>
                     <h3>Mountain Surfing</h3>
                 </div>
+                
                 <div class="video-card">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8oml9kiymrE?rel=0" title="Chasing Sunrise" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    <iframe 
+                        width="100%" height="100%" 
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/8oml9kiymrE?autoplay=1><img src=https://img.youtube.com/vi/8oml9kiymrE/hqdefault.jpg alt='Chasing Sunrise'><span>▶</span></a>"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Chasing Sunrise"
+                        loading="lazy">
+                    </iframe>
                     <h3>Chasing Sunrise</h3>
                 </div>
+
                 <div class="video-card">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hOdIAdMtJoM?rel=0" title="Ridge Run" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    <iframe 
+                        width="100%" height="100%" 
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/hOdIAdMtJoM?autoplay=1><img src=https://img.youtube.com/vi/hOdIAdMtJoM/hqdefault.jpg alt='Ridge Run'><span>▶</span></a>"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Ridge Run"
+                        loading="lazy">
+                    </iframe>
                     <h3>Ridge Run</h3>
                 </div>
+
                 <div class="video-card">
-                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/T_kGNAku0OM?rel=0" title="Corsica Flow" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                     <iframe 
+                        width="100%" height="100%" 
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/T_kGNAku0OM?autoplay=1><img src=https://img.youtube.com/vi/T_kGNAku0OM/hqdefault.jpg alt='Corsica Flow'><span>▶</span></a>"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Corsica"
+                        loading="lazy">
+                    </iframe>
                     <h3>Corsica</h3>
                 </div>
             </div>
