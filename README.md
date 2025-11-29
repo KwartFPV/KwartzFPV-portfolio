@@ -40,7 +40,16 @@ Since this project uses modern browser features and YouTube embeds, it is recomm
 
 ## 📂 Project Structure
 
-├── index.html # Main structure ├── style.css # Styling (Scroll snap, Grid, Responsive) ├── script.js # Mobile menu logic ├── assets/ │ ├── header-video.webm # Background video │ ├── background2.webp # Hero fallback image │ ├── drone-7.webp # 7" Drone photo │ ├── drone-5.webp # 5" Drone photo │ └── gear.webp # Equipment photo └── README.md # Documentation
+├── index.html # Main structure 
+├── style.css # Styling (Scroll snap, Grid, Responsive) 
+├── script.js # Mobile menu logic 
+├── assets/ │ 
+├── header-video.webm # Background video │ 
+├── background2.webp # Hero fallback image │ 
+├── drone-7.webp # 7" Drone photo │ 
+├── drone-5.webp # 5" Drone photo │ 
+└── gear.webp # Equipment photo 
+└── README.md # Documentation
 
 
 ## 🔧 Customization
