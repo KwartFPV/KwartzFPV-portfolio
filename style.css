@@ -10,9 +10,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; text-decoration: none; border: none; outline: none; }
 html { font-size: 62.5%; overflow-y: auto; scroll-behavior: smooth; }
 body { background: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
-.video-layer {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -1;
+
 /* === COMPOSANTS REUTILISABLES === */
 /* Boutons */
 .btn, .btn-outline, .link-btn { display: inline-block; border-radius: 50px; font-weight: 700; transition: 0.3s; cursor: pointer; font-size: 1.8rem; }
@@ -54,7 +52,7 @@ section { position: relative; width: 100%; min-height: 100vh; display: flex; jus
 
 /* === HOME === */
 .home { padding: 0; background: url('background2.webp') no-repeat center center/cover; background-color: #000; }
-.back-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: grayscale(100%) contrast(1.1); }
+.back-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: grayscale(100%) contrast(1.1); }
 .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.3), #050505); z-index: 1; }
 .home-content { z-index: 2; }
 .home h1 { font-size: 12rem; line-height: 1; margin: 1.5rem 0; text-shadow: 0 0 30px rgba(0,168,255,0.4); }
@@ -206,4 +204,5 @@ input:focus, textarea:focus { border-color: var(--main-color); background: #1a1a
     .switch-label { display: none; } /* Pas de texte sur mobile */
     .switch-icon { width: 45px; height: 45px; font-size: 2.2rem; }
 }
+
 
