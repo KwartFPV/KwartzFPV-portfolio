@@ -419,14 +419,35 @@ section {
 }
 
 /* Le titre de la vidéo apparaît au survol ou en bas */
+/* Le titre de la vidéo apparaît en HAUT pour libérer les contrôles en bas */
 .video-card h3 {
     position: absolute;
-    bottom: 0; left: 0; width: 100%;
-    background: rgba(0,0,0,0.8);
-    padding: 1.5rem;
+    top: 0;          /* On le colle en haut */
+    left: 0; 
+    width: 100%;
+    
+    /* On inverse le dégradé : Noir en haut -> Transparent vers le bas */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+    
+    padding: 2rem;   /* Un peu d'espace */
     font-size: 1.8rem;
     text-align: left;
-    backdrop-filter: blur(5px);
+    
+    /* Astuce Pro : Permet de cliquer sur la vidéo À TRAVERS la zone vide du titre */
+    pointer-events: none; 
+}
+
+/* On réactive le clic UNIQUEMENT sur le texte du lien */
+.video-card h3 a {
+    pointer-events: auto;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.video-card h3 a:hover {
+    color: var(--main-color);
+    text-shadow: 0 0 10px rgba(0, 168, 255, 0.5);
 }
 
 .btn-text { font-size: 2rem; color: var(--text-color); margin-top: 3rem; display: inline-block; border-bottom: 2px solid var(--main-color); padding-bottom: 0.5rem; transition: 0.3s; }
@@ -435,13 +456,24 @@ section {
 
 /* === SECTION 5: CONTACT === */
 .contact form {
-    max-width: 800px; /* Formulaire plus large */
+    max-width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
+
+/* LA BOÎTE FLEXIBLE (Correctif chevauchement) */
+.contact .content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 75vh; 
+}
+
 .input-group { display: flex; gap: 2rem; }
+
+/* STYLE DES CHAMPS (On garde ça !) */
 input, textarea {
     width: 100%;
     padding: 2rem;
@@ -451,24 +483,55 @@ input, textarea {
     border-radius: 15px;
     border: 1px solid #333;
 }
-textarea { height: 200px; resize: none; }
-input:focus, textarea:focus { outline: none; border-color: var(--main-color); background: #1a1a1a; }
-.mini-footer { margin-top: 5rem; font-size: 1.4rem; color: #555; }
+
+textarea { 
+    height: 200px; 
+    resize: none; 
+}
+
+/* EFFET GLOW BLEU (On garde ça !) */
+input:focus, textarea:focus { 
+    outline: none; 
+    border-color: var(--main-color); 
+    background: #1a1a1a; 
+}
+
+.contact .btn {
+    margin-top: 2rem;
+}
+
+/* FOOTER ROBUSTE (La nouvelle version) */
+.mini-footer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #555;
+    margin-top: auto; /* Pousse le footer tout en bas */
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
 
 
-/* === RESPONSIVE (MOBILE) === */
+
+/* === RESPONSIVE (MOBILE - Largeur) === */
+/* Ton code actuel pour téléphones et tablettes */
 @media (max-width: 1024px) {
-    html { scroll-snap-type: none; overflow-y: scroll; } /* Désactive le snap sur mobile/tablette */
+    html { scroll-snap-type: none; overflow-y: scroll; }
     section { height: auto; min-height: 100vh; padding: 12rem 5% 5rem; }
     
     .home h1 { font-size: 8rem; }
     
     .row-layout { flex-direction: column; gap: 4rem; }
     .image-box img { width: 100%; height: auto; }
+    .about .heading { text-align: center; font-size: 5rem; } /* Petit ajout pour centrer le titre About sur mobile */
     
-    /* On passe les grilles en colonnes simples sur mobile */
     .grid-layout { display: flex; flex-direction: column; height: auto; }
     .side-column { flex-direction: column; }
+    
+    /* Ajustement hauteur cartes mobile */
+    .main-card { height: 500px; }
+    .small-card { height: 250px; }
     
     .cinema-grid { display: flex; flex-direction: column; height: auto; }
     .video-card { height: 250px; }
@@ -482,4 +545,15 @@ input:focus, textarea:focus { outline: none; border-color: var(--main-color); ba
     .navbar a { display: block; margin: 3rem 0; font-size: 2.2rem; }
 }
 
+/* === RESPONSIVE (HAUTEUR - Laptops) === */
+/* Le NOUVEAU code pour empêcher le footer de gêner sur les écrans peu hauts */
+@media (max-height: 850px) {
+    .mini-footer {
+        position: relative; /* Reprend sa place normale */
+        bottom: auto;
+        left: auto;
+        margin-top: 6rem;
+        padding-bottom: 2rem;
+    }
+}
 
