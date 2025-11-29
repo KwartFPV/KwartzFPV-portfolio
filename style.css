@@ -130,3 +130,77 @@ input:focus, textarea:focus { border-color: var(--main-color); background: #1a1a
     .navbar a { display: block; margin: 3rem 0; font-size: 2.2rem; }
     .contact .content-box { min-height: auto; margin-top: 5rem; }
 }
+
+/* === BOUTON DE SWITCH (MODE LUXE <-> OSD) === */
+.mode-switch {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    z-index: 9999; /* Toujours au-dessus de tout */
+    transition: 0.3s;
+}
+
+.switch-label {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif; /* Ou 'VT323' sur le site OSD si tu préfères */
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    opacity: 0; /* Caché par défaut, apparaît au survol */
+    transform: translateX(20px);
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.5); /* Petit fond pour la lisibilité */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.switch-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00a8ff; /* Bleu Kwartz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #00a8ff;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.3);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Petit effet rebond */
+}
+
+/* Animation au survol */
+.mode-switch:hover .switch-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mode-switch:hover .switch-icon {
+    background: #00a8ff;
+    color: #000;
+    box-shadow: 0 0 40px #00a8ff;
+    transform: scale(1.1) rotate(360deg); /* Rotation fun */
+}
+
+/* Spécifique pour le site OSD (Police Pixel) */
+.osd-style .switch-label {
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+}
+
+/* MOBILE : On affiche le bouton en haut à droite pour ne pas gêner le pouce */
+@media (max-width: 1024px) {
+    .mode-switch {
+        bottom: auto;
+        top: 20px;
+        right: 20px;
+    }
+    .switch-label { display: none; } /* Pas de texte sur mobile */
+    .switch-icon { width: 45px; height: 45px; font-size: 2.2rem; }
+}
