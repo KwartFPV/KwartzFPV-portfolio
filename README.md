@@ -3,7 +3,6 @@
 > **"Sky is our limit."**
 > An immersive, full-screen web experience showcasing the world of Mountain Surfing and Cinematic FPV.
 
-![Kwartz FPV Preview](image.webp)
 ## 🏔️ Project Overview
 
 This repository hosts the source code for the **Kwartz FPV Portfolio**. Completely redesigned in 2025, this site moves away from traditional scrolling to offer a **Cinematic Experience**. It features full-page snapping sections, video backgrounds, and a modern "Bento Grid" layout to showcase high-performance drone builds.
