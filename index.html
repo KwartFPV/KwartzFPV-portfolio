@@ -6,16 +6,22 @@
     <title>Kwartz FPV | Cinematic Experience</title>
     <meta name="description" content="Kwartz FPV Portfolio - Cinematic Mountain Surfing & Freestyle Drone Pilot.">
     
+    <link rel="preload" href="background2.webp" as="image">
+
     <style>
         :root { --bg-color: #050505; --text-color: #ffffff; --main-color: #00a8ff; }
         body { background: var(--bg-color); color: var(--text-color); margin: 0; font-family: sans-serif; overflow-x: hidden; }
         .header { position: fixed; top: 0; left: 0; width: 100%; padding: 2.5rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent); }
         .logo { font-size: 3rem; font-weight: 900; color: #fff; text-decoration: none; }
         .logo span { color: var(--main-color); }
+        
+        /* On définit l'image de fond ici pour qu'elle s'affiche tout de suite */
         .home { position: relative; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; background: url('background2.webp') no-repeat center center/cover; }
+        
         .back-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
         .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.3), #050505); z-index: 1; }
         .home-content { position: relative; z-index: 2; text-align: center; }
+        .home h1 { font-size: 8rem; line-height: 1; margin: 0 0 20px 0; text-transform: uppercase; }
     </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +73,7 @@
     <section class="section about" id="about">
         <div class="content-box row-layout">
             <div class="image-box">
-                <img src="image.webp" alt="Kwartz Pilot" loading="lazy">
+                <img src="image.webp" alt="Kwartz Pilot" loading="lazy" width="500" height="500">
             </div>
             <div class="text-box">
                 <h2 class="heading">The <span>Pilot</span></h2>
@@ -81,7 +87,6 @@
     <section class="section drones" id="drones">
         <div class="content-box">
             <h2 class="heading">My <span>Hangar</span></h2>
-            
             <div class="grid-layout">
                 <div class="card main-card">
                     <img src="drone-7.webp" alt="Jeno 7 inch" class="card-bg" loading="lazy">
@@ -90,7 +95,7 @@
                         <div class="card-icon"><i class='bx bxs-plane-alt'></i></div>
                         <h3>Jeno 7" Long Range</h3>
                         <p class="highlight">The Mountain Beast</p>
-                        <p>Designed for deep dives and high peaks. Stable, powerful, and built for cinematic smoothness.</p>
+                        <p>Designed for deep dives and high peaks.</p>
                         <ul class="specs-list">
                             <li>T-Motor F90 1500KV</li>
                             <li>DJI O3 Air Unit</li>
@@ -113,7 +118,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="card small-card">
                         <img src="gear.webp" alt="FPV Gear" class="card-bg" loading="lazy">
                         <div class="card-overlay"></div>
