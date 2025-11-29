@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kwartz FPV Portfolio - Cinematic Mountain Surfing & Freestyle Drone Pilot.">
+    <title>Kwartz FPV</title>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo">KWARTZ<span>.FPV</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">Pilot</a>
+            <a href="#drones">Hangar</a>
+            <a href="#projects">Cinema</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="section home" id="home">
+        
+        <video autoplay muted loop playsinline class="back-video" poster="background2.webp">
+            <source src="header-video.webm" type="video/webm">
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="content-box home-content">
+            <h3>Welcome to the unknown</h3>
+            <h1>KWARTZ</h1>
+            <p>"Sky is our limit."</p>
+            
+            <div class="social-icons">
+                <a href="https://www.instagram.com/kwartz_fpv" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.youtube.com/@Kwartz_fpv" target="_blank"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.facebook.com/kwartzfpv/" target="_blank"><i class='bx bxl-facebook'></i></a>
+            </div>
+            
+            <a href="#projects" class="btn">Enter the Flow</a>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="content-box row-layout">
+            <div class="image-box">
+                <img src="image.webp" alt="Kwartz Pilot">
+            </div>
+            <div class="text-box">
+                <h2 class="heading">The <span>Pilot</span></h2>
+                <h3>Thom alias Kwartz</h3>
+                <p>Based in France, specialized in <strong>Mountain Surfing</strong>. My goal is to capture the grandeur of landscapes with a unique perspective, blending adrenaline and cinematic smoothness.</p>
+                <a href="#contact" class="btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+<section class="section drones" id="drones">
+        <div class="content-box">
+            <h2 class="heading">My <span>Hangar</span></h2>
+            
+            <div class="grid-layout">
+                
+                <div class="card main-card">
+                    <img src="drone-7.webp" alt="Jeno 7 inch" class="card-bg">
+                    <div class="card-overlay"></div>
+                    
+                    <div class="card-content">
+                        <div class="card-icon"><i class='bx bxs-plane-alt'></i></div>
+                        <h3>Jeno 7" Long Range</h3>
+                        <p class="highlight">The Mountain Beast</p>
+                        <p>Designed for deep dives and high peaks. Stable, powerful, and built for cinematic smoothness.</p>
+                        <ul class="specs-list">
+                            <li>T-Motor F90 1500KV</li>
+                            <li>DJI O3 Air Unit</li>
+                            <li>Jeno 7"</li>
+                        </ul>
+                        <a href="https://rotorbuilds.com/build/33286" target="_blank" class="link-btn">View Full Build <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+
+                <div class="side-column">
+                    
+                    <div class="card small-card">
+                        <img src="drone-5.webp" alt="5 inch drone" class="card-bg">
+                        <div class="card-overlay"></div>
+                        
+                        <div class="card-content side-content">
+                            <i class='bx bxs-paper-plane icon'></i>
+                            <div>
+                                <h3>5" Freestyle</h3>
+                                <p>Pure freestyle & training.</p>
+                                <a href="https://rotorbuilds.com/build/33287" target="_blank" class="link-btn">Full Build <i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card small-card">
+                        <img src="gear.webp" alt="FPV Gear" class="card-bg">
+                        <div class="card-overlay"></div>
+                        
+                        <div class="card-content side-content">
+                            <i class='bx bxs-camera icon'></i>
+                            <div>
+                                <h3>Gear</h3>
+                                <p>DJI Goggles 2 • TX16S</p>
+                                <a href="#" target="_blank" class="link-btn">My settings <i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects" id="projects">
+        <div class="content-box">
+            <h2 class="heading">Latest <span>Flights</span></h2>
+            
+            <div class="cinema-grid">
+                
+                <div class="video-card">
+                    <iframe 
+                        src="https://www.youtube.com/embed/av9pxhEjXCI" 
+                        title="Mountain Surfing" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                    <h3>Mountain Surfing</h3>
+                </div>
+
+                <div class="video-card">
+                    <iframe 
+                        src="https://www.youtube.com/embed/8oml9kiymrE" 
+                        title="Chasing Sunrise" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                    <h3>Chasing Sunrise</h3>
+                </div>
+
+                <div class="video-card">
+                    <iframe 
+                        src="https://www.youtube.com/embed/hOdIAdMtJoM" 
+                        title="Ridge Run" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                    <h3>Last sunset</h3>
+                </div>
+
+                <div class="video-card">
+                     <iframe 
+                        src="https://www.youtube.com/embed/T_kGNAku0OM" 
+                        title="Corsica Flow" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                    <h3>Corsica flow</h3>
+                </div>
+            </div>
+            <a href="https://www.youtube.com/@Kwartz_fpv" target="_blank" class="btn-text">More on YouTube</a>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="content-box">
+            <h2 class="heading">Let's <span>Connect</span></h2>
+            <form action="https://formspree.io/f/movaznvd" method="POST">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <textarea name="message" placeholder="Message..." required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            
+            <footer class="mini-footer">
+                <p>© 2024 Kwartz FPV | All Rights Reserved</p>
+            </footer>
+        </div>
+    </section>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
