@@ -55,7 +55,7 @@ Ce projet a été rigoureusement optimisé pour les Core Web Vitals :
 │   └── ...
 └── README.md           # Documentation
 
-🚀 Installation & Lancement
+##🚀 Installation & Lancement
 
 Ce projet utilise des modules ES et des Iframes, il est recommandé de l'exécuter via un serveur local.
 
@@ -72,7 +72,7 @@ Ce projet utilise des modules ES et des Iframes, il est recommandé de l'exécut
 
         Cliquez sur "Go Live" en bas à droite de la fenêtre.
 
-🔧 Personnalisation
+##🔧 Personnalisation
 
     Vidéos YouTube : Modifiez les ID vidéo dans les balises iframe (srcdoc) dans index.html et indexosd.html.
 
@@ -80,7 +80,7 @@ Ce projet utilise des modules ES et des Iframes, il est recommandé de l'exécut
 
     Builds Drones : Mettez à jour les liens Rotorbuilds et les images dans la section Hangar.
 
-📬 Contact
+##📬 Contact
 
     Instagram : @kwartz_fpv
 
