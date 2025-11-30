@@ -59,9 +59,8 @@ section { position: relative; width: 100%; min-height: 100vh; display: flex; jus
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    filter: grayscale(100%) contrast(1.1);
-    opacity: 0; 
-    transition: opacity 1.5s ease-in-out;
+    filter: grayscale(100%) contrast(1.2);
+    opacity: 1; 
 }
 .overlay { 
     position: absolute; 
@@ -242,4 +241,5 @@ input:focus, textarea:focus {
     .switch-label { display: none; }
     .switch-icon { width: 45px; height: 45px; font-size: 2.2rem; }
 }
+
 
