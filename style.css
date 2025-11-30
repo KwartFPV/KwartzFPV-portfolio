@@ -131,10 +131,50 @@ section { position: relative; width: 100%; min-height: 100vh; display: flex; jus
 .contact form { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; }
 .contact .content-box { display: flex; flex-direction: column; justify-content: center; min-height: 75vh; }
 .input-group { display: flex; gap: 2rem; }
-input, textarea { width: 100%; padding: 2rem; background: #111; color: #fff; font-size: 1.8rem; border-radius: 15px; border: 1px solid #333; }
+input, textarea { 
+    width: 100%; padding: 2rem; background: #111; color: #fff; 
+    font-size: 1.8rem; border-radius: 15px; border: 1px solid #333;
+    transition: all 0.3s ease;
+}
 textarea { height: 200px; resize: none; }
-input:focus, textarea:focus { border-color: var(--main-color); background: #1a1a1a; }
-.contact .btn { margin-top: 2rem; }
+input:focus, textarea:focus { 
+    border-color: var(--main-color); 
+    background: #1a1a1a;
+    box-shadow: 0 0 20px rgba(0,168,255,0.1);
+    outline: none;
+}
+.contact .btn { 
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* Form Feedback */
+.form-feedback {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.form-feedback.success {
+    background: rgba(0,168,255,0.1);
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-feedback.error {
+    background: rgba(255,50,50,0.1);
+    border: 1px solid #ff3232;
+    color: #ff5050;
+    opacity: 1;
+    transform: translateY(0);
+}
 .mini-footer { position: relative; width: 100%; text-align: center; font-size: 1.4rem; color: #555; margin-top: auto; padding-top: 4rem; padding-bottom: 1rem; }
 
 /* === SWITCH BUTTON === */
@@ -191,3 +231,4 @@ input:focus, textarea:focus { border-color: var(--main-color); background: #1a1a
     .switch-label { display: none; }
     .switch-icon { width: 45px; height: 45px; font-size: 2.2rem; }
 }
+
