@@ -49,7 +49,7 @@ section { position: relative; width: 100%; min-height: 100vh; display: flex; jus
 .content-box { max-width: 1400px; width: 100%; text-align: center; position: relative; z-index: 2; }
 
 /* === HOME SECTION - MOUNTAIN DIVE SETUP === */
-.home { padding: 0; background: url('background2.webp') no-repeat center center/cover; background-color: #000; }
+.home { padding: 0; background: url('assets/background2.webp') no-repeat center center/cover; background-color: #000; }
 /* Dans style.css */
 .back-video {
     position: absolute;
@@ -241,5 +241,6 @@ input:focus, textarea:focus {
     .switch-label { display: none; }
     .switch-icon { width: 45px; height: 45px; font-size: 2.2rem; }
 }
+
 
 
