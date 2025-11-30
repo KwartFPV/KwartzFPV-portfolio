@@ -59,7 +59,6 @@ section { position: relative; width: 100%; min-height: 100vh; display: flex; jus
     object-fit: cover; 
     z-index: 0; 
     filter: grayscale(100%) contrast(1.1);
-    /* Optimisé pour le zoom dive */
     transform-origin: center center;
     will-change: transform;
     transition: transform 0.1s linear;
