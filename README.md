@@ -3,7 +3,7 @@
 > **"Sky is our limit."**
 > Une expérience web immersive double : un portfolio cinématique haute performance et un mode "Pilote OSD" interactif pour les passionnés de FPV.
 
-![Kwartz FPV Preview](https://kwartzfpv.netlify.app/)
+![Kwartz FPV Preview][https://kwartzfpv.netlify.app/]
 
 ## 🏔️ Aperçu du Projet
 
