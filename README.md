@@ -1,68 +1,91 @@
-# 🚁 KWARTZ FPV - Cinematic Portfolio
+# 🚁 KWARTZ FPV - Portfolio Cinématique & OSD
 
 > **"Sky is our limit."**
-> An immersive, full-screen web experience showcasing the world of Mountain Surfing and Cinematic FPV.
+> Une expérience web immersive double : un portfolio cinématique haute performance et un mode "Pilote OSD" interactif pour les passionnés de FPV.
 
-## 🏔️ Project Overview
+![Kwartz FPV Preview](assets/background2.webp)
 
-This repository hosts the source code for the **Kwartz FPV Portfolio**. Completely redesigned in 2025, this site moves away from traditional scrolling to offer a **Cinematic Experience**. It features full-page snapping sections, video backgrounds, and a modern "Bento Grid" layout to showcase high-performance drone builds.
+## 🏔️ Aperçu du Projet
 
-## ✨ Key Features
+Ce dépôt contient le code source du **Portfolio Kwartz FPV**. Refondu en 2025, ce site propose deux interfaces uniques :
+1.  **Mode Cinématique :** Une expérience de défilement fluide avec arrière-plans vidéo, grilles modernes (Bento Grid) et transitions douces.
+2.  **Mode Pilote (OSD) :** Une interface simulant les lunettes FPV (On-Screen Display) avec télémétrie en temps réel simulée (batterie, signal, GPS) et navigation au style rétro.
 
-* **🎥 Immersive Hero Section:** Full-screen HTML5 video background (WebM) with a seamless fallback poster for mobile performance.
-* **⚡ CSS Scroll Snap:** A "magnetic" scrolling experience that locks each section to the viewport for a presentation-like feel.
-* **🍱 Bento Grid Layout:** A modern, asymmetrical grid in the "Hangar" section to showcase the 7" Long Range and 5" Freestyle builds.
-* **📱 Fully Responsive:** Adaptive design that switches from complex grids to stacked layouts on mobile devices.
-* **📺 YouTube Integration:** Custom-styled video grid allowing playback of cinematic footage directly within the portfolio.
-* **🎨 Dark Glassmorphism UI:** A sleek, dark aesthetic with blurred overlays and neon blue accents (`#00a8ff`).
+## ✨ Fonctionnalités Clés
 
-## 🛠️ Tech Stack
+### 🎨 Design & Expérience
+* **Hero Immersif :** Vidéo d'arrière-plan HTML5 plein écran avec fallback optimisé.
+* **Effet "Mountain Dive" :** Zoom progressif et fondu au défilement pour une immersion totale.
+* **Mode OSD Interactif :** Une interface secondaire complète (`indexosd.html`) simulant un retour vidéo de drone analogique/numérique.
+* **Bento Grid Layout :** Mise en page asymétrique moderne pour la section "Hangar".
+* **Intégration YouTube :** Grille de vidéos optimisée pour le chargement rapide.
 
-* **HTML5:** Semantic structure.
-* **CSS3:** Advanced usage of Grid, Flexbox, Scroll Snap, and Media Queries.
-* **JavaScript:** Vanilla JS for mobile navigation and DOM manipulation.
-* **Assets:** Boxicons (Icons), Google Fonts (Montserrat).
+### ⚡ Performance & Optimisation (Nouveauté)
+Ce projet a été rigoureusement optimisé pour les Core Web Vitals :
+* **Chargement Éclair (LCP) :** Préchargement des ressources critiques et gestion intelligente des priorités (`fetchpriority`).
+* **Stabilité Visuelle (CLS) :** Dimensions explicites sur tous les médias pour éviter les sauts de mise en page.
+* **Rendu Intelligent :** Utilisation de `content-visibility: auto` pour ne pas calculer le rendu des sections hors écran.
+* **JavaScript Non-Bloquant :** Scripts différés (`defer`) et boucles d'animation optimisées via `requestAnimationFrame`.
+* **Polices Légères :** Chargement sélectif des graisses de police nécessaires.
 
-## 🚀 How to Run Locally
+## 🛠️ Stack Technique
 
-Since this project uses modern browser features and YouTube embeds, it is recommended to run it via a local server to avoid CORS issues.
+* **HTML5 :** Structure sémantique et propre.
+* **CSS3 :** Grid, Flexbox, Scroll Snap, Animations GPU, Variables CSS.
+* **JavaScript (Vanilla) :** Logique légère pour le menu mobile, les effets de scroll (Lenis) et la simulation de télémétrie OSD.
+* **Bibliothèques :** [Lenis](https://github.com/studio-freight/lenis) (Smooth Scroll), Boxicons (Icônes).
 
-1.  **Clone the repository:**
-    ```bash
+## 📂 Structure du Projet
+
+```text
+├── index.html          # Mode Cinématique (Page principale)
+├── style.css           # Styles optimisés pour le mode Cinématique
+├── script.js           # Logique UI et Effets (Smooth Scroll, Dive)
+│
+├── indexosd.html       # Mode Pilote (Interface OSD)
+├── styleosd.css        # Styles rétro/terminaux pour l'OSD
+├── scriptosd.js        # Simulation de télémétrie (Batterie, RSSI, GPS)
+│
+├── assets/             # Dossier des médias optimisés (.webp, .webm)
+│   ├── header-video.webm
+│   ├── background2.webp
+│   ├── drone-7.webp
+│   ├── drone-5.webp
+│   ├── gear.webp
+│   └── ...
+└── README.md           # Documentation
+
+🚀 Installation & Lancement
+
+Ce projet utilise des modules ES et des Iframes, il est recommandé de l'exécuter via un serveur local.
+
+    Cloner le dépôt :
+    Bash
+
     git clone [https://github.com/ton-pseudo/KwartzFPV-portfolio.git](https://github.com/ton-pseudo/KwartzFPV-portfolio.git)
-    ```
 
-2.  **Open with VS Code.**
+    Ouvrir avec VS Code.
 
-3.  **Launch with Live Server:**
-    * Install the "Live Server" extension in VS Code.
-    * Click **"Go Live"** at the bottom right of the window.
+    Lancer avec Live Server :
 
-## 📂 Project Structure
+        Installez l'extension "Live Server" dans VS Code.
 
-├── index.html # Main structure 
-├── style.css # Styling (Scroll snap, Grid, Responsive) 
-├── script.js # Mobile menu logic 
-├── assets/ │ 
-├── header-video.webm # Background video │ 
-├── background2.webp # Hero fallback image │ 
-├── drone-7.webp # 7" Drone photo │ 
-├── drone-5.webp # 5" Drone photo │ 
-└── gear.webp # Equipment photo 
-└── README.md # Documentation
+        Cliquez sur "Go Live" en bas à droite de la fenêtre.
 
+🔧 Personnalisation
 
-## 🔧 Customization
+    Vidéos YouTube : Modifiez les ID vidéo dans les balises iframe (srcdoc) dans index.html et indexosd.html.
 
-To update the content:
-* **Images:** Replace the `.webp` files in the root folder with your own (ensure they keep the same names or update the HTML).
-* **Video:** Replace `header-video.webm` with a short, muted, loopable clip (< 5MB recommended).
-* **Links:** Update the `href` attributes in `index.html` to point to your new Rotorbuilds or YouTube videos.
+    Télémétrie OSD : Ajustez les valeurs aléatoires dans scriptosd.js pour modifier le comportement de la batterie ou du GPS.
 
-## 📬 Contact
+    Builds Drones : Mettez à jour les liens Rotorbuilds et les images dans la section Hangar.
 
-* **Instagram:** [@kwartz_fpv](https://www.instagram.com/kwartz_fpv)
-* **YouTube:** [Kwartz_fpv](https://www.youtube.com/@Kwartz_fpv)
-* **Email:** thomfpv@gmail.com
+📬 Contact
 
----
+    Instagram : @kwartz_fpv
+
+    YouTube : Kwartz_fpv
+
+    Email : thomfpv@gmail.com
+
+© 2025 Kwartz FPV | All Rights Reserved
