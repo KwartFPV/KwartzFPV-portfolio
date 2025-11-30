@@ -35,7 +35,7 @@ Ce projet a été rigoureusement optimisé pour les Core Web Vitals :
 * **JavaScript (Vanilla) :** Logique légère pour le menu mobile, les effets de scroll (Lenis) et la simulation de télémétrie OSD.
 * **Bibliothèques :** [Lenis](https://github.com/studio-freight/lenis) (Smooth Scroll), Boxicons (Icônes).
 
-##📬 Contact
+### 📬 Contact
 
     Instagram : @kwartz_fpv
 
