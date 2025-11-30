@@ -50,18 +50,18 @@ section { position: relative; width: 100%; min-height: 100vh; display: flex; jus
 
 /* === HOME SECTION - MOUNTAIN DIVE SETUP === */
 .home { padding: 0; background: url('background2.webp') no-repeat center center/cover; background-color: #000; }
-.back-video { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: 0; 
+/* Dans style.css */
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
     filter: grayscale(100%) contrast(1.1);
-    transform-origin: center center;
-    will-change: transform;
-    transition: transform 0.1s linear;
+    opacity: 0; 
+    transition: opacity 1.5s ease-in-out;
 }
 .overlay { 
     position: absolute; 
