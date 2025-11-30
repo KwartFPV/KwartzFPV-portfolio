@@ -162,3 +162,26 @@ document.addEventListener("DOMContentLoaded", () => {
          }, 5000);
     });
 }
+
+// --- 6. PILOT 3D TILT EFFECT ---
+    const pilotContainer = document.querySelector('.image-box');
+    const pilotImg = pilotContainer ? pilotContainer.querySelector('img') : null;
+
+    if (pilotContainer && pilotImg) {
+        pilotContainer.addEventListener('mousemove', (e) => {
+            const rect = pilotContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            const sensitivity = 20;
+            pilotImg.style.transform = `perspective(1000px) rotateY(${x / sensitivity}deg) rotateX(${-y / sensitivity}deg) scale(1.05)`;
+        });
+
+        pilotContainer.addEventListener('mouseenter', () => {
+            pilotImg.style.transition = 'transform 0.1s ease-out';
+        });
+
+        pilotContainer.addEventListener('mouseleave', () => {
+            pilotImg.style.transition = 'transform 0.5s ease';
+            pilotImg.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1)';
+        });
+    }
