@@ -74,18 +74,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const homeHeight = homeSection.offsetHeight;
             const progress = Math.min(scrollY / homeHeight, 1);
 
-
+            // EFFET DIVE : Zoom progressif sur la vidéo (comme si on plongeait)
             if (videoElement) {
                 const scale = 1 + (progress * 0.5); // De 1 à 1.5
                 videoElement.style.transform = `scale(${scale})`;
             }
 
-)
+            // Le contenu disparaît rapidement (on dive à travers)
             if (homeContent) {
                 homeContent.style.opacity = 1 - (progress * 2);
                 homeContent.style.transform = `translateY(${progress * 100}px) scale(${1 - progress * 0.3})`;
             }
 
+            // L'overlay s'assombrit (on entre dans la montagne)
             if (overlay) {
                 const darkness = 0.3 + (progress * 0.6);
                 overlay.style.background = `linear-gradient(to bottom, rgba(0,0,0,${darkness}), #050505)`;
