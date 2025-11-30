@@ -9,7 +9,7 @@
 
 Ce dépôt contient le code source du **Portfolio Kwartz FPV**. Refondu en 2025, ce site propose deux interfaces uniques :
 1.  **Mode Cinématique :** Une expérience de défilement fluide avec arrière-plans vidéo, grilles modernes (Bento Grid) et transitions douces.
-2.  **Mode Pilote (OSD) :** Une interface simulant les lunettes FPV (On-Screen Display) avec télémétrie en temps réel simulée (batterie, signal, GPS) et navigation au style rétro.
+2.  **Mode Pilote (OSD) :** Une interface secondaire complète (`indexosd.html`) simulant les lunettes FPV (On-Screen Display) avec télémétrie en temps réel simulée (batterie, signal, GPS) et navigation au style rétro.
 
 ## ✨ Fonctionnalités Clés
 
@@ -35,6 +35,15 @@ Ce projet a été rigoureusement optimisé pour les Core Web Vitals :
 * **JavaScript (Vanilla) :** Logique légère pour le menu mobile, les effets de scroll (Lenis) et la simulation de télémétrie OSD.
 * **Bibliothèques :** [Lenis](https://github.com/studio-freight/lenis) (Smooth Scroll), Boxicons (Icônes).
 
+##📬 Contact
+
+    Instagram : @kwartz_fpv
+
+    YouTube : Kwartz_fpv
+
+    Email : thomfpv@gmail.com
+
+© 2025 Kwartz FPV | All Rights Reserved
 ## 📂 Structure du Projet
 
 ```text
@@ -54,38 +63,3 @@ Ce projet a été rigoureusement optimisé pour les Core Web Vitals :
 │   ├── gear.webp
 │   └── ...
 └── README.md           # Documentation
-
-##🚀 Installation & Lancement
-
-Ce projet utilise des modules ES et des Iframes, il est recommandé de l'exécuter via un serveur local.
-
-    Cloner le dépôt :
-    Bash
-
-    git clone [https://github.com/ton-pseudo/KwartzFPV-portfolio.git](https://github.com/ton-pseudo/KwartzFPV-portfolio.git)
-
-    Ouvrir avec VS Code.
-
-    Lancer avec Live Server :
-
-        Installez l'extension "Live Server" dans VS Code.
-
-        Cliquez sur "Go Live" en bas à droite de la fenêtre.
-
-##🔧 Personnalisation
-
-    Vidéos YouTube : Modifiez les ID vidéo dans les balises iframe (srcdoc) dans index.html et indexosd.html.
-
-    Télémétrie OSD : Ajustez les valeurs aléatoires dans scriptosd.js pour modifier le comportement de la batterie ou du GPS.
-
-    Builds Drones : Mettez à jour les liens Rotorbuilds et les images dans la section Hangar.
-
-##📬 Contact
-
-    Instagram : @kwartz_fpv
-
-    YouTube : Kwartz_fpv
-
-    Email : thomfpv@gmail.com
-
-© 2025 Kwartz FPV | All Rights Reserved
