@@ -185,3 +185,4 @@ document.addEventListener("DOMContentLoaded", () => {
             pilotImg.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1)';
         });
     }
+
