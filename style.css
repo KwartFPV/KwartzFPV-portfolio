@@ -121,7 +121,8 @@ section { position: relative; width: 100%; min-height: 100vh; display: flex; jus
 .projects { background: #080808; }
 .cinema-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3rem; width: 100%; height: 60vh; }
 .video-card:hover { z-index: 10; }
-.video-card iframe { width: 100%; height: 100%; border: none; object-fit: cover; }
+.video-card iframe { width: 100%; height: 100%; border: none; object-fit: cover; pointer-events: none; }
+.video-card:hover iframe { pointer-events: auto; }
 .video-card h3 { position: absolute; top: 0; left: 0; width: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent); padding: 2rem; font-size: 1.8rem; text-align: left; pointer-events: none; }
 .video-card h3 a { pointer-events: auto; color: #fff; transition: 0.3s; }
 .video-card h3 a:hover { color: var(--main-color); text-shadow: 0 0 10px rgba(0, 168, 255, 0.5); }
