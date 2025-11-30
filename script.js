@@ -107,3 +107,58 @@ document.addEventListener("DOMContentLoaded", () => {
         mountainDive();
     }
 });
+
+    // --- 7. FORM VALIDATION & FEEDBACK ---
+  const contactForm = document.querySelector('.contact form');
+  if (contactForm) {
+        // Crée le message de feedback
+    const feedbackDiv = document.createElement('div');
+    feedbackDiv.className = 'form-feedback';
+    contactForm.appendChild(feedbackDiv);
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+            
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+            
+            // Animation envoi
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.6';
+
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                 headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Succès
+                feedbackDiv.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+                feedbackDiv.className = 'form-feedback success';
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+            } catch (error) {
+                // Erreur
+                feedbackDiv.textContent = '✗ Oops! Something went wrong. Please try again.';
+                feedbackDiv.className = 'form-feedback error';
+            }
+
+            // Reset bouton
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+
+            // Efface le message après 5s
+            setTimeout(() => {
+            feedbackDiv.className = 'form-feedback';
+         }, 5000);
+    });
+}
