@@ -46,7 +46,8 @@
 
     <section class="home" id="home">
         <video autoplay muted loop playsinline id="bg-video" class="back-video" poster="assets/background2.webp">
-            <source src="assets/header-video.webm" type="video/webm" media="(min-width: 768px)">
+            <source src="assets/header-video-osd.webm" type="video/webm" media="(max-width: 768px)">
+            <source src="assets/header-video.webm" type="video/webm">
         </video>
         <div class="overlay"></div>
 
@@ -99,6 +100,7 @@
                         <a href="https://rotorbuilds.com/build/33286" target="_blank" rel="noopener noreferrer" class="link-btn">View Full Build <i class='bx bx-right-arrow-alt'></i></a>
                     </div>
                 </div>
+
                 <div class="side-column">
                     <div class="card small-card">
                         <img src="assets/drone-5.webp" alt="5 inch drone" class="card-bg" loading="lazy">
@@ -120,7 +122,7 @@
                             <div>
                                 <h3>Gear</h3>
                                 <p>DJI action 2 • TX16S • DJI v2</p>
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="link-btn">Settings coming soon <i class='bx bx-right-arrow-alt'></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="link-btn">My settings <i class='bx bx-right-arrow-alt'></i></a>
                             </div>
                         </div>
                     </div>
@@ -205,10 +207,10 @@
             </footer>
         </div>
     </section>
+    
     <a href="indexosd.html" class="mode-switch">
         <span class="switch-label">PILOT MODE</span>
         <div class="switch-icon"><i class='bx bxs-joystick'></i></div>
     </a>
 </body>
 </html>
-
